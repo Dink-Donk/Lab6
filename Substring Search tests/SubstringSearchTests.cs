@@ -32,6 +32,7 @@ namespace Substring_Search_tests
             {
                 var actual = algm.SubstringSearch(text, pattern);
                 Assert.Equal(expected, actual);
+                Assert.Equal(expected.ToList().Count,actual.Count);
             }
         }
 

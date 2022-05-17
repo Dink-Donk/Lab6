@@ -18,7 +18,7 @@ namespace SubString
             {
                 input = sr.ReadToEnd();
             }
-            string pattern = "Анна Каренина";
+            string pattern = "Лев Толстой";
             BoyerMoore bm = new BoyerMoore();
             KMP kmp = new KMP();
             RK RK = new RK();
@@ -33,28 +33,28 @@ namespace SubString
             sw.Restart();
             BMOutput = bm.SubstringSearch(input, pattern);
             sw.Stop();
-            Console.WriteLine("Boyer Moore: " + sw.ElapsedMilliseconds);
+            Console.WriteLine("Boyer Moore: " + sw.ElapsedTicks);
             Console.WriteLine("Всего: " + BMOutput.Count);
             Console.WriteLine("---------------------------------------");
 
             sw.Restart();
             KMPOutput = kmp.SubstringSearch(input, pattern);
             sw.Stop();
-            Console.WriteLine("KMP: " + sw.ElapsedMilliseconds);
+            Console.WriteLine("KMP: " + sw.ElapsedTicks);
             Console.WriteLine("Всего: " + KMPOutput.Count);
             Console.WriteLine("---------------------------------------");
 
             sw.Restart();
             RKOutput = RK.SubstringSearch(input, pattern);
             sw.Stop();
-            Console.WriteLine("RK: " + sw.ElapsedMilliseconds);
+            Console.WriteLine("RK: " + sw.ElapsedTicks);
             Console.WriteLine("Всего: " + RKOutput.Count);
             Console.WriteLine("---------------------------------------");
 
             sw.Restart();
             BruteOutput = brute.SubstringSearch(input, pattern);
             sw.Stop();
-            Console.WriteLine("Brute Force: " + sw.ElapsedMilliseconds);
+            Console.WriteLine("Brute Force: " + sw.ElapsedTicks);
             Console.WriteLine("Всего: " + BruteOutput.Count);
             Console.WriteLine("---------------------------------------");
             Console.ReadKey();

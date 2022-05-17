@@ -19,3 +19,13 @@ C:\Users\User\Desktop\Substring Search\TimeTests\obj\Debug\TimeTests.csproj.Core
 C:\Users\User\Desktop\Substring Search\TimeTests\obj\Debug\TimeTests.csproj.CopyComplete
 C:\Users\User\Desktop\Substring Search\TimeTests\obj\Debug\TimeTests.exe
 C:\Users\User\Desktop\Substring Search\TimeTests\obj\Debug\TimeTests.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Debug\TimeTests.exe.config
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Debug\TimeTests.exe
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Debug\TimeTests.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Debug\BruteForce.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Debug\BruteForce.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Debug\TimeTests.csprojAssemblyReference.cache
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Debug\TimeTests.csproj.CoreCompileInputs.cache
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Debug\TimeTests.csproj.CopyComplete
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Debug\TimeTests.exe
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Debug\TimeTests.pdb

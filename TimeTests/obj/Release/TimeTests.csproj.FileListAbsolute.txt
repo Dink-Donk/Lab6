@@ -19,3 +19,13 @@ C:\Users\User\Desktop\Substring Search\TimeTests\obj\Release\TimeTests.csproj.Co
 C:\Users\User\Desktop\Substring Search\TimeTests\obj\Release\TimeTests.csproj.CopyComplete
 C:\Users\User\Desktop\Substring Search\TimeTests\obj\Release\TimeTests.exe
 C:\Users\User\Desktop\Substring Search\TimeTests\obj\Release\TimeTests.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Release\TimeTests.exe.config
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Release\TimeTests.exe
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Release\TimeTests.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Release\BruteForce.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\bin\Release\BruteForce.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Release\TimeTests.csprojAssemblyReference.cache
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Release\TimeTests.csproj.CoreCompileInputs.cache
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Release\TimeTests.csproj.CopyComplete
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Release\TimeTests.exe
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\TimeTests\obj\Release\TimeTests.pdb

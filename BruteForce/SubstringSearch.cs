@@ -14,9 +14,9 @@ namespace SubstringSearch
             StringBuilder patternSB = new StringBuilder(pattern);
             int[] borders = new int[patternSB.Length];
             borders[0] = 0;
-            int index = 0;
             for (int i = 1; i < patternSB.Length; i++)
             {
+                int index = borders[i - 1];
                 while (index > 0 && patternSB[index] != patternSB[i])
                 {
                     index = borders[index - 1];
@@ -34,19 +34,17 @@ namespace SubstringSearch
             var borders = FindBorders(pattern);
             List<int> result = new List<int>();
             int index = 0;
-            StringBuilder textSB = new StringBuilder(text);
-            StringBuilder patternSB = new StringBuilder(pattern);
             for (int i = 0; i < text.Length; i++)
             {
-                while (index > 0 && textSB[i] != patternSB[index])
+                while (index > 0 && text[i] != pattern[index])
                 {
                     index = borders[index - 1];
                 }
-                if (text[i] == patternSB[index])
+                if (text[i] == pattern[index])
                 {
                     index++;
                 }
-                if (index == patternSB.Length)
+                if (index == pattern.Length)
                 {
                     result.Add(i - index + 1);
                     index = borders[pattern.Length - 1];
@@ -58,23 +56,19 @@ namespace SubstringSearch
 
     public class RK : ISubstringSearch
     {
-        private const int mod = 2001;
+        private const int mod = 17;
         private const int d = 128;
         public RK() { }
         public List<int> SubstringSearch(string text, string pattern)
         {
-            StringBuilder textSB = new StringBuilder(text);
-            StringBuilder patternSB = new StringBuilder(pattern);
             List<int> result = new List<int>();
-            var patternH = patternSB[0] % mod;
-            var textH = textSB[0] % mod;
-            var firstIndexHash = 1;
-            for (int i = 1; i < pattern.Length; i++) 
+            var patternH = 0;
+            var textH = 0;
+            var firstIndexHash = (int)Math.Pow(d, pattern.Length - 1) % mod;
+            for (int i = 0; i < pattern.Length; i++)
             {
-                patternH = (patternH * d + patternSB[i]) % mod;                
-                textH = (textH * d + textSB[i]) % mod;
-                firstIndexHash = (firstIndexHash * d) % mod;
-                if (firstIndexHash < 0) { firstIndexHash += mod; }
+                patternH = (d * patternH + pattern[i]) % mod;
+                textH = (d * textH + text[i]) % mod;
             }
             if (patternH < 0) { patternH += mod; }
             if (textH < 0) { textH += mod; }
@@ -82,21 +76,29 @@ namespace SubstringSearch
             {
                 if (textH == patternH)
                 {
-                    if(new StringBuilder(text.Substring(i, pattern.Length)).Equals(patternSB))
+                    bool flag = true;
+                    for (int j = 0; j < pattern.Length; j++)
+                    {
+                        if (text[i + j] != pattern[j])
+                        {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag)
                     {
                         result.Add(i);
                     }
                 }
-                if (i < text.Length - pattern.Length) 
+                else if (i < text.Length - pattern.Length)
                 {
-                    textH = (d * (textH - textSB[i] * firstIndexHash) + textSB[i + patternSB.Length]) % mod;
+                    textH = (d * (textH - text[i] * firstIndexHash) + text[i + pattern.Length]) % mod;
                     if (textH < 0) { textH += mod; }
                 }
             }
             return result;
         }
     }
-
     public class BruteForce : ISubstringSearch
     {
         public List<int> SubstringSearch(string text, string pattern)
@@ -125,12 +127,23 @@ namespace SubstringSearch
             List<int> patternIndexes = new List<int>();
 
             //Bad char 
-            Dictionary<char, int> badCharTable = new Dictionary<char, int>();
+            //Dictionary<char, int> badCharTable = new Dictionary<char, int>();
+            //for (int i = pattern.Length - 2; i >= 0; i--)
+            //{
+            //    if (!badCharTable.ContainsKey(pattern[i]))
+            //    {
+            //        badCharTable.Add(pattern[i], pattern.Length - i - 1);
+            //    }
+            //}
+
+            //Bad char
+            int[] badCharTable = new int[10000];
             for (int i = pattern.Length - 2; i >= 0; i--)
             {
-                if (!badCharTable.ContainsKey(pattern[i]))
+                int symbol = pattern[i];
+                if (badCharTable[symbol]==0)
                 {
-                    badCharTable.Add(pattern[i], pattern.Length - i - 1);
+                    badCharTable[symbol]=pattern.Length - i-1;
                 }
             }
 
@@ -141,12 +154,23 @@ namespace SubstringSearch
             int suffixLength = 1;
             for (int i = pattern.Length - 1; i >= 0; i--)
             {
-                string currSuffixToFind = pattern.Substring(i);
+
                 for (int j = i - 1; j >= 0; j--)
                 {
-                    string currSubstringToCheck = pattern.Substring(j, suffixLength);
-                    if (currSuffixToFind == currSubstringToCheck)
+                    int currSubstringToCheckIndexer = j;
+                    int currSuffixToFindIndexer = i;
+                    bool foundMatch = true;
+                    for (int howFarWeGo = suffixLength; howFarWeGo > 0; howFarWeGo--, currSubstringToCheckIndexer++, currSuffixToFindIndexer++)
+                    {
+                        if (pattern[currSubstringToCheckIndexer] != pattern[currSuffixToFindIndexer])
+                        {
+                            foundMatch = false;
+                            break;
+                        }
+                    }
+                    if (foundMatch)
                         goodSuffShift[i] = i - j;
+
                 }
                 suffixLength++;
             }
@@ -192,8 +216,10 @@ namespace SubstringSearch
                         {
                             int badCharSkip = 1;
                             int goodSuffSkip = 1;
-                            if (badCharTable.ContainsKey(text[textIndex]))
+                            if (badCharTable[text[textIndex]] != 0)
+                            {
                                 badCharSkip = badCharTable[text[textIndex]];
+                            }
                             else
                                 badCharSkip = pattern.Length;
                             if (pattern.Length - patternIndex - 2 > 0)

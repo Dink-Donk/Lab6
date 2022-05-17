@@ -29,3 +29,18 @@ C:\Users\User\Desktop\Substring Search\BruteForce\obj\Debug\SubstringSearch.cspr
 C:\Users\User\Desktop\Substring Search\BruteForce\obj\Debug\SubstringSearch.csproj.CopyComplete
 C:\Users\User\Desktop\Substring Search\BruteForce\obj\Debug\BruteForce.dll
 C:\Users\User\Desktop\Substring Search\BruteForce\obj\Debug\BruteForce.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\BruteForce.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\BruteForce.pdb
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.abstractions.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.assert.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.core.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.abstractions.xml
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.assert.xml
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.core.xml
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\bin\Debug\xunit.execution.desktop.xml
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\obj\Debug\SubstringSearch.csprojAssemblyReference.cache
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\obj\Debug\SubstringSearch.csproj.CoreCompileInputs.cache
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\obj\Debug\SubstringSearch.csproj.CopyComplete
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\obj\Debug\BruteForce.dll
+C:\Users\Vladimir\source\repos\MP\Sem6\Lab6\BruteForce\obj\Debug\BruteForce.pdb

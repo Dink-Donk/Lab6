@@ -18,7 +18,7 @@ namespace SubString
             {
                 input = sr.ReadToEnd();
             }
-            string pattern = "Лев Толстой";
+            string pattern = "по";
             BoyerMoore bm = new BoyerMoore();
             KMP kmp = new KMP();
             RK RK = new RK();
@@ -29,32 +29,35 @@ namespace SubString
             List<int> BruteOutput = new List<int>();
 
             var sw = new Stopwatch();
+            var sw1 = new Stopwatch();
+            var sw2 = new Stopwatch();
+            var sw3 = new Stopwatch();
 
-            sw.Restart();
+            sw.Start();
             BMOutput = bm.SubstringSearch(input, pattern);
             sw.Stop();
-            Console.WriteLine("Boyer Moore: " + sw.ElapsedTicks);
+            Console.WriteLine("Boyer Moore: " + (sw.ElapsedTicks));
             Console.WriteLine("Всего: " + BMOutput.Count);
             Console.WriteLine("---------------------------------------");
 
-            sw.Restart();
+            sw1.Start();
             KMPOutput = kmp.SubstringSearch(input, pattern);
-            sw.Stop();
-            Console.WriteLine("KMP: " + sw.ElapsedTicks);
+            sw1.Stop();
+            Console.WriteLine("KMP: " + sw1.ElapsedTicks) ;
             Console.WriteLine("Всего: " + KMPOutput.Count);
             Console.WriteLine("---------------------------------------");
 
-            sw.Restart();
+            sw2.Start();
             RKOutput = RK.SubstringSearch(input, pattern);
-            sw.Stop();
-            Console.WriteLine("RK: " + sw.ElapsedTicks);
+            sw2.Stop();
+            Console.WriteLine("RK: " + sw2.ElapsedTicks);
             Console.WriteLine("Всего: " + RKOutput.Count);
             Console.WriteLine("---------------------------------------");
 
-            sw.Restart();
+            sw3.Start();
             BruteOutput = brute.SubstringSearch(input, pattern);
-            sw.Stop();
-            Console.WriteLine("Brute Force: " + sw.ElapsedTicks);
+            sw3.Stop();
+            Console.WriteLine("Brute Force: " + sw3.ElapsedTicks);
             Console.WriteLine("Всего: " + BruteOutput.Count);
             Console.WriteLine("---------------------------------------");
             Console.ReadKey();

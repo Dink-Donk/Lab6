@@ -1,34 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\Substring Search tests\\Substring Search tests.csproj": {}
+    "F:\\6 семестр\\Substring Search\\Substring Search tests\\Substring Search tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\BruteForce\\SubstringSearch.csproj": {
-      "version": "1.0.0",
+    "F:\\6 семестр\\Substring Search\\BruteForce\\SubstringSearch.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\BruteForce\\SubstringSearch.csproj",
+        "projectUniqueName": "F:\\6 семестр\\Substring Search\\BruteForce\\SubstringSearch.csproj",
         "projectName": "SubstringSearch",
-        "projectPath": "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\BruteForce\\SubstringSearch.csproj"
+        "projectPath": "F:\\6 семестр\\Substring Search\\BruteForce\\SubstringSearch.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\Substring Search tests\\Substring Search tests.csproj": {
+    "F:\\6 семестр\\Substring Search\\Substring Search tests\\Substring Search tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\Substring Search tests\\Substring Search tests.csproj",
+        "projectUniqueName": "F:\\6 семестр\\Substring Search\\Substring Search tests\\Substring Search tests.csproj",
         "projectName": "Substring Search tests",
-        "projectPath": "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\Substring Search tests\\Substring Search tests.csproj",
-        "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\Substring Search tests\\obj\\",
+        "projectPath": "F:\\6 семестр\\Substring Search\\Substring Search tests\\Substring Search tests.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\6 семестр\\Substring Search\\Substring Search tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +45,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\BruteForce\\SubstringSearch.csproj": {
-                "projectPath": "C:\\Users\\Vladimir\\source\\repos\\MP\\Sem6\\Lab6\\BruteForce\\SubstringSearch.csproj"
+              "F:\\6 семестр\\Substring Search\\BruteForce\\SubstringSearch.csproj": {
+                "projectPath": "F:\\6 семестр\\Substring Search\\BruteForce\\SubstringSearch.csproj"
               }
             }
           }
@@ -55,6 +61,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -88,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
